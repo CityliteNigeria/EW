@@ -150,6 +150,10 @@ It is a solution where users can share locations digitally, generating a GPS coo
         <script src="common-files/js/startup-kit.js"></script>
         <script>
         $('#subscribe').click(function(){
+            mixpanel.identify($('#email').val());
+            mixpanel.people.set({
+                "$email": $('#email').val()
+            });
             mixpanel.register({
                 "email": $('#email').val()
             });
