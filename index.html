@@ -17,6 +17,24 @@
         <!-- end -->
         <link rel="stylesheet" href="common-files/css/animations.css" />
         <link rel="stylesheet" href="css/style.css" />
+        
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-55090451-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+<!-- Google Analytics -->
+        
+        <!-- start Mixpanel -->
+        <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("45ad763dfb88b1f6cdbabd0d40b0a516");</script>
+        <!-- end Mixpanel -->
     </head>
 
     <body>
@@ -39,14 +57,14 @@
             <div class="row">
                 <div class="col-sm-5 col-sm-offset-1">
                     <h3>We are about to make you easier to find by colleages, friends and family.</h3>
-                    <p class="lead">Enroutify plots a route and generate driving directions to the locations you share. Whether it is a party, meeting or a night out with friends, you can share the location securely.</p> <br>
+                    <p class="lead">Enroutify plots a route and generate driving directions to the locations you share. Whether it is a party, meeting or a night out with friends, you can share the location securely.</p> <br />
                     <div class="row">
                     <div class="subscribe-form col-sm-12">
-                        <form>
+                        <form action="//enroutify.us9.list-manage.com/subscribe/post?u=ff5c28371e854bf88d6817240&amp;id=5e01166247" method="post" target="_blank">
                             <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Enter Your Email Address" required="yes" />
+                                <input id="email" type="email" name="EMAIL" class="form-control" placeholder="Enter Your Email Address" required="yes" />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="button"><span class="fui-check ic"></span> <span class="tx">Notify Me</span></button>
+                                    <button id="subscribe" class="btn btn-primary" type="button"><span class="fui-check ic"></span> <span class="tx">Notify Me</span></button>
                                 </span>
                             </div>
                         </form>
@@ -54,7 +72,7 @@
                 </div>
                 </div>
                 <div class="col-sm-4 col-sm-offset-1">
-                    <img src="common-files/img/header/iphone.png" class="hidden-xs" alt="">
+                    <img src="common-files/img/header/iphone.png" class="hidden-xs" alt="Enroutify Mobile App" />
                 </div>
             </div>
         </div>
@@ -65,7 +83,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-sm-offset-1">
-                <img src="common-files/icons/Compas@2x.png" width="224" height="223" alt="compass" />
+                <img src="common-files/icons/Compas@2x.png" width="224" height="223" alt="Enroutify compass" />
             </div>
             <div class="col-sm-6">
                 <h3>About Enroutify</h3>
@@ -76,12 +94,12 @@ It is a solution where users can share locations digitally, generating a GPS coo
                 <div class="btns">
                     <a class="btn btn-inverse" href="#">
                         <span>Coming Soon</span></a>
-                    <a class="btn btn-inverse" href="#"><span class="fui-apple"> </span>
+                    <a id="apple" class="btn btn-inverse" href="#"><span class="fui-apple"> </span>
                         <span>Appstore</span></a>                        
-                    <a class="btn btn-inverse" href="#"><span class="fui-android"> </span>
+                    <a id="android" class="btn btn-inverse" href="#"><span class="fui-android"> </span>
                         <span>Google Play</span></a>
-                    <a class="btn btn-inverse" href="#"><span class="fui-microsoft"> </span> <span>Windows Store</span></a>
-                    <a class="btn btn-inverse" href="#"><img src="images/bb.png" class="bb" width="35" height="24" /><img src="images/bbw.png" class="bbw" width="35" height="24" />
+                    <a id="microsoft" class="btn btn-inverse" href="#"><span class="fui-microsoft"> </span> <span>Windows Store</span></a>
+                    <a id="blackberry" class="btn btn-inverse" href="#"><img src="images/bb.png" class="bb" width="35" height="24" /><img src="images/bbw.png" class="bbw" width="35" height="24" />
                         <span>Blackberry App World</span></a>
                 </div>
             </div>
@@ -93,23 +111,23 @@ It is a solution where users can share locations digitally, generating a GPS coo
     <div class="container">
         <div class="content">
             <div class="social-btns">
-                <a href="#">
+                <a id="twitter" href="#">
                     <div class="fui-twitter"></div>
                     <div class="fui-twitter"></div>
                 </a>
-                <a href="#">
+                <a id="facebook" href="#">
                     <div class="fui-facebook"></div>
                     <div class="fui-facebook"></div>
                 </a>
-                <a href="#">
+                <a id="googleplus" href="#">
                     <div class="fui-googleplus"></div>
                     <div class="fui-googleplus"></div>
                 </a>
             </div>
             <h3>Get in touch with us</h3>
             <div class="links">
-                <a href="tel:+2348056552980">+234 805 655 2980</a><br />
-                <a href="mailto:info@enroutify.com">info@enroutify.com</a>
+                <a id="phone" href="tel:+2348056552980">+234 805 655 2980</a><br />
+                <a id="email" href="mailto:info@enroutify.me">info@enroutify.me</a>
             </div>
         </div>
     </div>
@@ -128,5 +146,62 @@ It is a solution where users can share locations digitally, generating a GPS coo
         <script src="common-files/js/modernizr.custom.js"></script>
         <script src="common-files/js/page-transitions.js"></script>
         <script src="common-files/js/startup-kit.js"></script>
+        <script>
+        $('#subscribe').click(function(){
+            mixpanel.register({
+                "email": $('#email').val();
+            });
+            mixpanel.track("Subscribed for Email Notification");
+        });
+        
+        $('#apple').click(function(){
+            mixpanel.register({
+                "Interest": "Apple Version";
+            });
+            mixpanel.track("Clicked Apple Icon");
+        });
+        
+        $('#android').click(function(){
+            mixpanel.register({
+                "Interest": "Android Version";
+            });
+            mixpanel.track("Clicked Android Icon");
+        });
+        
+        $('#microsoft').click(function(){
+            mixpanel.register({
+                "Interest": "Windows Version";
+            });
+            mixpanel.track("Clicked Windows Icon");
+        });
+        
+        $('#blackberry').click(function(){
+            mixpanel.register({
+                "Interest": "Blackberry Version";
+            });
+            mixpanel.track("Clicked Blackberry Icon");
+        });
+        
+        $('#twitter').click(function(){
+            mixpanel.track("Visited Twitter Page");
+        });
+        
+        $('#facebook').click(function(){
+            mixpanel.track("Visited Facebook Page");
+        });
+        
+        $('#googleplus').click(function(){
+            mixpanel.track("Visited Google+ Page");
+        });
+        
+        $('#phone').click(function(){
+            mixpanel.track("Clicked Contact Us Phone Number");
+        });
+        
+        $('#email').click(function(){
+            mixpanel.track("Clicked Contact Us Email");
+        });
+        
+        </script>
     </body>
 </html>
