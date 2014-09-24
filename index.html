@@ -11,7 +11,7 @@
         <meta name="google-site-verification" content="q2_esWRY_LRyDdERRtYo4BURmIrGrkxOEk1jcIM1ETo" />
         <link rel="shortcut icon" href="flat-ui/images/favicon.ico" />
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="flat-ui/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="flat-ui/css/flat-ui.css" />
         <!-- Using only with Flat-UI (free)-->
         <link rel="stylesheet" href="common-files/css/icon-font.css" />
@@ -73,7 +73,7 @@ mixpanel.init("45ad763dfb88b1f6cdbabd0d40b0a516");</script>
                             <div class="input-group">
                                 <input id="email" type="email" name="EMAIL" class="form-control" placeholder="Enter Your Email Address" required="yes" />
                                 <span class="input-group-btn">
-                                    <button id="subscribe" class="btn btn-primary" type="button"><span class="fui-check ic"></span> <span class="tx">Notify Me</span></button>
+                                    <button id="subscribe" class="btn btn-primary" type="submit"><span class="fui-check ic"></span> <span class="tx">Notify Me</span></button>
                                 </span>
                             </div>
                         </form>
@@ -163,8 +163,9 @@ It is a solution where users can share locations digitally, generating a GPS coo
         </div>
 
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="common-files/js/jquery-1.10.2.min.js"></script>
-        <script src="flat-ui/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="common-files/js/modernizr.custom.js"></script>
         <script src="common-files/js/page-transitions.js"></script>
         <script src="common-files/js/startup-kit.js"></script>
@@ -173,36 +174,40 @@ It is a solution where users can share locations digitally, generating a GPS coo
 
         <script>
         $('#subscribe').click(function(){
+            mixpanel.identify($('#email').val());
+            mixpanel.people.set({
+                "$email": $('#email').val()
+            });
             mixpanel.register({
-                "email": $('#email').val();
+                "email": $('#email').val()
             });
             mixpanel.track("Subscribed for Email Notification");
         });
         
         $('#apple').click(function(){
             mixpanel.register({
-                "Interest": "Apple Version";
+                "Interest": "Apple Version"
             });
             mixpanel.track("Clicked Apple Icon");
         });
         
         $('#android').click(function(){
             mixpanel.register({
-                "Interest": "Android Version";
+                "Interest": "Android Version"
             });
             mixpanel.track("Clicked Android Icon");
         });
         
         $('#microsoft').click(function(){
             mixpanel.register({
-                "Interest": "Windows Version";
+                "Interest": "Windows Version"
             });
             mixpanel.track("Clicked Windows Icon");
         });
         
         $('#blackberry').click(function(){
             mixpanel.register({
-                "Interest": "Blackberry Version";
+                "Interest": "Blackberry Version"
             });
             mixpanel.track("Clicked Blackberry Icon");
         });
