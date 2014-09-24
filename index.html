@@ -39,6 +39,14 @@ mixpanel.init("45ad763dfb88b1f6cdbabd0d40b0a516");</script>
     </head>
 
     <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=337794523067845&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
         <div class="page-wrapper">
         <!-- Header -->
@@ -71,6 +79,19 @@ mixpanel.init("45ad763dfb88b1f6cdbabd0d40b0a516");</script>
                         </form>
                     </div>
                 </div>
+                <div class="social">
+                <span class="facebook">
+                <div class="fb-like" data-href="https://www.facebook.com/enroutify" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                </span>
+                <span class="twitter">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://enroutify.me" data-via="enroutify" data-related="enroutify" data-hashtags="EnroutifyMe">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</span>
+<span class="gplus">
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="tall" data-annotation="none" data-href="http://enroutify.me/"></div>
+</span>
+                    </div>
                 </div>
                 <div class="col-sm-4 col-sm-offset-1">
                     <img src="common-files/img/header/iphone.png" class="hidden-xs" alt="Enroutify Mobile App" />
@@ -112,15 +133,15 @@ It is a solution where users can share locations digitally, generating a GPS coo
     <div class="container">
         <div class="content">
             <div class="social-btns">
-                <a id="twitter" href="#">
+                <a id="twitter" href="https://twitter.com/enroutify">
                     <div class="fui-twitter"></div>
                     <div class="fui-twitter"></div>
                 </a>
-                <a id="facebook" href="#">
+                <a id="facebook" href="https://www.facebook.com/enroutify">
                     <div class="fui-facebook"></div>
                     <div class="fui-facebook"></div>
                 </a>
-                <a id="googleplus" href="#">
+                <a id="googleplus" href="https://www.google.com/+EnroutifyMePlus">
                     <div class="fui-googleplus"></div>
                     <div class="fui-googleplus"></div>
                 </a>
@@ -136,7 +157,7 @@ It is a solution where users can share locations digitally, generating a GPS coo
 <!-- Footer -->
 <footer class="footer-4 bg-midnight-blue">
     <div class="container">
-        <a class="brand" href="index.html">Enroutify</a>
+        <a class="brand" href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
     </div>
 </footer>
         </div>
@@ -147,6 +168,9 @@ It is a solution where users can share locations digitally, generating a GPS coo
         <script src="common-files/js/modernizr.custom.js"></script>
         <script src="common-files/js/page-transitions.js"></script>
         <script src="common-files/js/startup-kit.js"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
         <script>
         $('#subscribe').click(function(){
             mixpanel.register({
