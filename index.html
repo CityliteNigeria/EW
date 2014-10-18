@@ -10,8 +10,9 @@
         <meta name="author" content="Olanipekun Olufemi, Citylite Nigeria" />
         <meta name="google-site-verification" content="q2_esWRY_LRyDdERRtYo4BURmIrGrkxOEk1jcIM1ETo" />
         <link rel="shortcut icon" href="flat-ui/images/favicon.ico" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css' />
+        
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="flat-ui/css/flat-ui.css" />
         <!-- Using only with Flat-UI (free)-->
         <link rel="stylesheet" href="common-files/css/icon-font.css" />
@@ -51,17 +52,22 @@ mixpanel.init("45ad763dfb88b1f6cdbabd0d40b0a516");</script>
         <div class="page-wrapper" ui-view></div>
 
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="common-files/js/modernizr.custom.js"></script>
         <script src="common-files/js/page-transitions.js"></script>
         <script src="common-files/js/startup-kit.js"></script>
         <!-- Place this tag in your head or just before your close body tag. -->
         <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!-- Google Maps -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-8zZJe-8YDfmcQPxhCKLXS8N25Gwu5ns&sensor=true"></script>
+        <script src="bower_components/gmaps/gmaps.js"></script>
         <!-- Angular -->
         <script src="bower_components/angular/angular.js"></script>        
-        
+        <!-- firebase -->
+        <script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+        <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
         <!-- Dependencies -->
         <script src="js/services/interfaceService.js"></script> 
         <script src="js/controllers/locationCtrl.js"></script> 

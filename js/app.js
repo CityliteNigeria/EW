@@ -1,4 +1,4 @@
-angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl'])
+angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','firebase'])
 .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
     // State for any unmatched url
     $urlRouterProvider.otherwise('/');
@@ -13,6 +13,13 @@ angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.
     .state('location',{
         url: '/location/:userid/:locationid',
         templateUrl: 'templates/location.html',
-        controller: 'locationCtrl' 
+        controller: 'locationCtrl',
+        resolve: {
+            "currentUser": ['$firebaseSimpleLogin',function($firebaseSimpleLogin){
+            var ref = new Firebase("https://enroutify.firebaseio.com");
+            var auth = $firebaseSimpleLogin(ref);
+            return auth.$getCurrentUser();
+        }]
+        }
     })
 }])
