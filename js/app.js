@@ -1,4 +1,4 @@
-angular.module('enroutify',['ui.router'])
+angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl'])
 .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
     // State for any unmatched url
     $urlRouterProvider.otherwise('/');
@@ -11,8 +11,8 @@ angular.module('enroutify',['ui.router'])
         //controller: 'homeCtrl' 
     })
     .state('location',{
-        url: '/location/:locationcode',
+        url: '/location/:userid/:locationid',
         templateUrl: 'templates/location.html',
-        //controller: 'locationCtrl' 
+        controller: 'locationCtrl' 
     })
 }])
