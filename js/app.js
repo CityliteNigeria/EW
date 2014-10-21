@@ -1,4 +1,4 @@
-angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','firebase'])
+angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','firebase','ngScrollbar'])
 .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
     // State for any unmatched url
     $urlRouterProvider.otherwise('/');
