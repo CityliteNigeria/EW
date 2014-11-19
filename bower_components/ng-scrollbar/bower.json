@@ -1,10 +1,6 @@
 {
   "name": "ng-scrollbar",
-<<<<<<< HEAD
   "version": "0.0.7",
-=======
-  "version": "0.0.5",
->>>>>>> d2cc429... added ng-scroll
   "dependencies": {
   },
   "main": [

@@ -1,10 +1,6 @@
 {
   "name": "ng-scrollbar",
-<<<<<<< HEAD
   "version": "0.0.7",
-=======
-  "version": "0.0.6",
->>>>>>> d2cc429... added ng-scroll
   "dependencies": {},
   "main": [
     "./dist/ng-scrollbar.js",
@@ -16,7 +12,6 @@
     "jquery": "latest"
   },
   "homepage": "https://github.com/asafdav/ng-scrollbar",
-<<<<<<< HEAD
   "_release": "0.0.7",
   "_resolution": {
     "type": "version",
@@ -26,16 +21,4 @@
   "_source": "git://github.com/asafdav/ng-scrollbar.git",
   "_target": "~0.0.6",
   "_originalSource": "ng-scrollbar"
-=======
-  "_release": "0.0.6",
-  "_resolution": {
-    "type": "version",
-    "tag": "v0.0.6",
-    "commit": "b69a98565d9487a9c7017bcf167a19ade86aff8c"
-  },
-  "_source": "git://github.com/asafdav/ng-scrollbar.git",
-  "_target": "~0.0.6",
-  "_originalSource": "ng-scrollbar",
-  "_direct": true
->>>>>>> d2cc429... added ng-scroll
 }
