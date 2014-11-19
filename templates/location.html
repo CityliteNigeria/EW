@@ -3,7 +3,9 @@
     <div class="container-fluid no-padding">
         <div class="row">
             <div class = "col-sm-8 no-padding">
-            <div ng-style="mapSize" id="map"></div></div>
+            <div ng-style="mapSize" id="map"></div>
+            <div class="nav" ng-include="'templates/menu.html'"></div>
+            </div>
             <div class = "col-sm-4 no-padding">
             <div class="scrollme" ng-scrollbar rebuild-on="rebuild:me" ng-style="mapSize">
             <ul class="list-group" id="instructions" ></ul>
@@ -11,17 +13,5 @@
             </div>
         </div>
     </div>
-</section>
-<!-- login -->
-<div class="login-screen" ng-hide="user">
-          <div class="login-form animated tada">
-          <h6>Enroutify</h6>
-            <label>Login to view location</label>
-            <button class="btn btn-facebook btn-lg btn-block" ng-click="auth.$login('facebook',{rememberMe: true,scope: 'email,public_profile,user_friends'})"><i class="fui-facebook pull-left"></i> Facebook</button>
-            <button class="btn btn-google btn-lg btn-block" ng-click="auth.$login('google',{rememberMe: true,scope: 'https://www.googleapis.com/auth/plus.login'})"><i class="fui-googleplus pull-left"></i> Google</button>
-          </div>
-        </div>
-<!-- Footer -->
-<footer class="footer-4 bg-midnight-blue" ng-include="'templates/footer.html'" ng-hide="user">
-    
+</section> 
 </footer>

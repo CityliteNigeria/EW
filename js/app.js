@@ -1,4 +1,4 @@
-angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','firebase','ngScrollbar'])
+angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','enroutify.locationService','enroutify.loginCtrl','firebase','ngScrollbar','angular-loading-bar','ngAnimate'])
 .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
     // State for any unmatched url
     $urlRouterProvider.otherwise('/');
@@ -9,6 +9,11 @@ angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.
         url: '/',
         templateUrl: 'templates/home.html',
         //controller: 'homeCtrl' 
+    })
+    .state('login',{
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'loginCtrl' 
     })
     .state('location',{
         url: '/location/:userid/:locationid',
