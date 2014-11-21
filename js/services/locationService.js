@@ -40,9 +40,7 @@ return {
                         strokeColor: '#313131',
                         strokeOpacity: 0.9,
                         strokeWeight: 6
-                      }); 
-                      // rebuild the scrollbar
-                        $rootScope.$broadcast('rebuild:me'); 
+                      });
                     });
                   }
                 });

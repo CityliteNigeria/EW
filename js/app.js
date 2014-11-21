@@ -1,4 +1,4 @@
-angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','enroutify.locationService','enroutify.loginCtrl','firebase','ngScrollbar','angular-loading-bar','ngAnimate'])
+angular.module('enroutify',['ui.router','enroutify.interfaceService','enroutify.locationCtrl','enroutify.locationService','enroutify.loginCtrl','firebase','angular-loading-bar','ngAnimate'])
 .config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider){
     // State for any unmatched url
     $urlRouterProvider.otherwise('/');

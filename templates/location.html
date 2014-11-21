@@ -1,17 +1,7 @@
 <!-- location map -->
 <section class="bg-midnight-blue" ng-show="user">
     <div class="container-fluid no-padding">
-        <div class="row">
-            <div class = "col-sm-8 no-padding">
             <div ng-style="mapSize" id="map"></div>
-            <div class="nav" ng-include="'templates/menu.html'"></div>
-            </div>
-            <div class = "col-sm-4 no-padding">
-            <div class="scrollme" ng-scrollbar rebuild-on="rebuild:me" ng-style="mapSize">
-            <ul class="list-group" id="instructions" ></ul>
-            </div>
-            </div>
-        </div>
+            <div class="nav" ng-include="'templates/menu.html'"></div>  
     </div>
-</section> 
-</footer>
+</section>
