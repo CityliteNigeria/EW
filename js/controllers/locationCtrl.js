@@ -1,5 +1,6 @@
 angular.module('enroutify.locationCtrl', [])
 .controller('locationCtrl',['InterfaceService','$stateParams','$firebase','$scope','$firebaseSimpleLogin','currentUser','$rootScope','LocationService','$state',function(InterfaceService,$stateParams,$firebase,$scope,$firebaseSimpleLogin,currentUser,$rootScope,LocationService,$state){
+    mixpanel.track("Web Location Page");
     if(!currentUser){
         data = {
             userid: $stateParams.userid,
@@ -26,6 +27,17 @@ angular.module('enroutify.locationCtrl', [])
         locationData.$loaded(function(data){
             var coords = data.coords;
             LocationService.drawRoute(coords);
+            angular.element('#name').append(data.name);
+            angular.element('#address').append(data.address);
+            angular.element('#city').append(data.city);
+            angular.element('#state').append(data.state);
+            angular.element('#country').append(data.country);
+            angular.element('#desc').append(data.description);
+            angular.element('#locationpic').append('<img src="'+data.picture+'" />');
+            $scope.refreshMap = function(){
+                mixpanel.track("Refreshed Map");
+                LocationService.drawRoute(coords);
+            }
         });
     }
 }])

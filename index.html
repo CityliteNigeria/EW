@@ -59,11 +59,22 @@ mixpanel.init("1b8cfa5c307b640d258d1b7ccc9fc999");
         <h4 class="modal-title" id="myModalLabel">Directions</h4>
       </div>
       <div class="modal-body">
+      <div class="row">
+      <div class="col-md-6">
+      <div><strong class="strong">Location Name: </strong><span id="name"></span></div>
+      <div><strong>Address: </strong><span id="address"></span></div>
+      <div><strong>City: </strong><span id="city"></span></div>
+      <div><strong>State: </strong><span id="state"></span></div>
+      <div><strong>Country: </strong><span id="country"></span></div>
+      <div><strong>Location Description: </strong><span id="desc"></span></div>
+      </div>
+      <div id="locationpic" class="col-md-6"></div>
+      </div>
       <ul class="list-group" id="instructions" ></ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
     </div>
   </div>
@@ -99,6 +110,7 @@ mixpanel.init("1b8cfa5c307b640d258d1b7ccc9fc999");
         <script src="bower_components/angular-animate/angular-animate.min.js"></script>      
         <script src="js/app.js"></script>
         <script>
+        mixpanel.track("Web Home Page");
         $('#subscribe').click(function(){
             mixpanel.identify($('#email').val());
             mixpanel.people.set({
