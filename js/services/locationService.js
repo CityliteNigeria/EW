@@ -31,7 +31,7 @@ return {
               map.travelRoute({
                   origin: [position.coords.latitude, position.coords.longitude],
                   destination: [coords.latitude, coords.longitude],
-                  travelMode: 'walking',
+                  travelMode: 'driving',
                   step: function(e) {
                     angular.element('#instructions').append('<li class="list-group-item">'+e.instructions+'</li>');
                     angular.element('#instructions li:eq(' + e.step_number + ')').delay(450 * e.step_number).fadeIn(200, function() {
